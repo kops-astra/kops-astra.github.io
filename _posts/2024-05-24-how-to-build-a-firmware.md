@@ -4,8 +4,6 @@ date: 2024-05-24 00:00:00 +0530
 categories: [build]
 tags: [how to]
 ---
-
-# Firmware Build Process
 The build process in embedded C development involves translating human-readable source code into machine-executable code that can run on a microcontroller or embedded system. This process typically includes several steps, and toolchains play a vital role in each stage. Hence, it is very vital to understand a bit more about toolchains before we get into the details of the build process.
 ## Toolchain
 A toolchain is the set of tools that compiles source code into executables that can run on your target device, and includes a compiler, a linker, and run-time libraries. In simple terms, Toolchain is software that creates a binary executable file for the code you have written. It is this code that you flash in the microcontroller. <br>
