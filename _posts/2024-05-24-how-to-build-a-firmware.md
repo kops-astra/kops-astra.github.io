@@ -13,7 +13,7 @@ The choice of toolchain can significantly impact the efficiency and effectivenes
 
 Now, that we have an understanding of the toolchain lets get into the overview of the typical build process:<br>
 # 1.	Writing Source Code:
-Developers write C code using a text editor or an integrated development environment (IDE). This code contains the logic and functionality required for the embedded system. This code may include various modules, functions, data structures, and other constructs necessary to achieve the system's objectives. This source code can be written in languages like C, C++, or assembly language.
+Developers write code using a text editor or an integrated development environment (IDE). This code contains the logic and functionality required for the embedded system. This code may include various modules, functions, data structures, and other constructs necessary to achieve the system's objectives. This source code can be written in languages like C, C++, or assembly language.
 # 2. Compilation
 ## 1. Preprocessing:
 The preprocessor is a tool that runs before the actual compilation process.  The preprocessor removes all the comments from the c file. The preprocessor expands macros, includes header files, and handles conditional compilation. This involves handling directives like #include, #define, and #ifdef. For example:
@@ -28,7 +28,7 @@ The pre-processed source code is fed into a compiler, which translates it into m
 ### 1.	Front End Analysis:
 Front End Analysis checks for syntax and semantics of the code. It also resolves variable names, and maintains the information of the declared variables in a structure called symbol table which has its type, scope and so on.
 ### 2.	Back End Synthesis:
-When there are no errors in the front end analysis the complier takes its next action, Back End Synthesis which involves optimization and code generation. There are many forms of optimization such as transforming code into smaller or faster but functionally equivalent, inline expansion of functions, dead code removal, loop unrolling, and register allocation. Then in code generation, the compiler converts the optimized intermediate code structure into assembly code(.s or .asm file) based on the MCU architecture.
+When there are no errors in the front end analysis, the complier takes its next action, Back End Synthesis, which involves optimization and code generation. There are many forms of optimization such as transforming code into smaller or faster but functionally equivalent, inline expansion of functions, dead code removal, loop unrolling, and register allocation. Then in code generation, the compiler converts the optimized intermediate code structure into assembly code(.s or .asm file) based on the MCU architecture.
 <br>
 ## 3.	Assembly: 
 The assembler translates these assembly codes generated in the pervious into machine code. Optionally, if you're working at a low level, you might have inline assembly code or separate assembly files. These are also compiled to get object files(*.o or *.obj file) using an assembler. An object file that contains opcodes and data sections. <br>
@@ -39,13 +39,14 @@ __.data Segment:__ Initialized data segment, usually called simply the Data Segm
 __.bss Segment:__ Uninitialized data starts at the end of the data segment and contains all global variables and static variables that are initialized to zero or do not have explicit initialization in source code. <br>
 __stack Segment:__ The stack data segment stores temporary data like local variables and return addresses. <br>
 __heap Segment:__ Dynamic data storage. <br>
+
 The final output of assembler is an object file, to better understand what's going to happen in the next stage, we have to know what exactly inside that object file. <br>
 
-__Code and data__ is .text,.data,.rodata,.bss, stack, heap section that forms the part of the code which you have written.
-__Symbol table__ is used to store all variable names and their attributes.
-__Debug info__ section that has the mapping between the original source code and the information needed by the debugger.
-__Exports section__ contains global symbols either functions or variables.
-__Imports section__ contains symbol names that are needed from other object files.
+__Code and data__ is .text,.data,.rodata,.bss, stack, heap section that forms the part of the code which you have written. <br>
+__Symbol table__ is used to store all variable names and their attributes. <br>
+__Debug info__ section that has the mapping between the original source code and the information needed by the debugger. <br>
+__Exports section__ contains global symbols either functions or variables. <br>
+__Imports section__ contains symbol names that are needed from other object files. <br>
 Exports, imports, and symbol table sections are used by the linker during linking stage.
 
 ## 4.	Linking: 
