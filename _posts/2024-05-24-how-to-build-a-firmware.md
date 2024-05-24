@@ -4,11 +4,13 @@ date: 2024-05-24 00:00:00 +0530
 categories: [build]
 tags: [how to]
 ---
+
 The build process in embedded C development involves translating human-readable source code into machine-executable code that can run on a microcontroller or embedded system. This process typically includes several steps, and toolchains play a vital role in each stage. Hence, it is very vital to understand a bit more about toolchains before we get into the details of the build process.
 ## Toolchain
 A toolchain is the set of tools that compiles source code into executables that can run on your target device, and includes a compiler, a linker, and run-time libraries. In simple terms, Toolchain is software that creates a binary executable file for the code you have written. It is this code that you flash in the microcontroller. <br>
 However, an important distinction is that toolchain is not IDE. For example, Keil/VS-Code/Eclipse is an IDE whereas arm-elf-gcc/gcc-arm-none-eabi is a toolchain. Normally, IDEs have these toolchain inbuilt. If you are using Linux, you would have you run your toolchain independently. <br>
 The choice of toolchain can significantly impact the efficiency and effectiveness of the firmware build process. Different toolchains may offer varying levels of optimization, support for different microcontroller architectures, integration with IDEs, debugging capabilities, and compatibility with third-party libraries and frameworks. Therefore, selecting the right toolchain is an important decision for embedded developers. <br>
+
 Now, that we have an understanding of the toolchain lets get into the overview of the typical build process:<br>
 # 1.	Writing Source Code:
 Developers write C code using a text editor or an integrated development environment (IDE). This code contains the logic and functionality required for the embedded system. This code may include various modules, functions, data structures, and other constructs necessary to achieve the system's objectives. This source code can be written in languages like C, C++, or assembly language.
