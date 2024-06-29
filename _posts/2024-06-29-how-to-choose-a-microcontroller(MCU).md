@@ -1,3 +1,11 @@
+---
+title: "How to choose a Microcontroller(MCU)"
+date: 2024-06-29 00:00:00 +0530
+categories: [design]
+tags: [how to]
+---
+
+
 Whenever a new application is being developed, an embedded engineer is faced with a very critical question of what MCU to choose.It is an intimidating task because, realizing that the choice of MCU is wrong in the later stages of the project could prove a costly mistake and can have repercussions in terms of money, time and effort. There is a great temptation for an embedded engineer to choose a MCU based on whatever is readily available at the moment or pick an MCU which was used in a previous project even before looking at the nitigrities of the project. However, this is a big blunder. Therefore, choosing the right MCU plays a critical role in the beginning of any embedded project. 
 
 Choosing the right MCU involves several considerations based on the requirements of your project. Here are the key steps to guide you:
