@@ -16,10 +16,10 @@ timezone:
 
 title: Koushik B # the main title
 
-tagline: Everything Embedded # it will display as the sub-title
+tagline: Firmware is my playground. Microcontrollers, my canvas. # it will display as the sub-title
 
-description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+description: >-  # used by seo meta and the atom feed
+  I write code that speaks fluent binary, negotiates with peripherals, and never forgets to clear the watchdog. My idea of fun? Bringing up a brand-new board, chasing Heisenbugs, and making embedded systems behave like they actually want to work. I live in a world where timing is everything, memory is precious, and a single misplaced semicolon can cause existential crises (for the device, not me—usually). If it boots, blinks, or buzzes, there’s probably a little bit of me inside making it go.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -38,11 +38,11 @@ social:
   email: koushik.astra@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your twitter homepage
-    - https://github.com/username # change to your github homepage
+    # - https://twitter.com/username # change to your twitter homepage
+    - https://github.com/kops-astra # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/koushik-kops/
 
 # Site Verification Settings
 webmaster_verifications:
@@ -96,7 +96,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://media.licdn.com/dms/image/D5603AQENpeZTVRRcGQ/profile-displayphoto-shrink_400_400/0/1677680418851?e=1721865600&v=beta&t=72nO2_jeWAzNlpVe-Bs2V1oLTujf8jrxiqr9GEqDPnE
+avatar: assets\img\Profile_Photo.JPG
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
