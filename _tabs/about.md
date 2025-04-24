@@ -11,6 +11,3 @@ Whether it’s bringing up new boards, fine-tuning drivers, optimizing memory fo
 I’ve worked with MCUs from ARM Cortex-M to ESP32, written linker scripts, tamed bootloaders, and built production-grade firmware that ships in real products. When I’m not coding in C or elbow-deep in oscilloscope readings, I’m probably out riding my motorcycle, exploring new terrains or just enjoying a cricket match with my friends.
 
 Who knows where life will take me. But I know wherever I am, I'll be creating.
-
-Reach out to me here: 
-`LinkedIn`: https://www.linkedin.com/in/koushik-kops/ 
