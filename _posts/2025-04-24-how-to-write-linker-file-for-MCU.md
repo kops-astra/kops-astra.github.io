@@ -4,14 +4,9 @@ date: 2025-04-24 00:00:00 +0530
 categories: [design]
 tags: [how to]
 ---
-
-# How to Write a Linker File for a Microcontroller Unit (MCU)
-
 In embedded systems development, writing a custom linker script is essential for defining how memory is used by your program. Unlike application software on desktops, embedded software runs in constrained environments where every byte of memory matters. A linker file (also known as a **linker script**) tells the linker where and how to place code and data in the MCU's memory map.
 
 This article explains how to write a basic linker script for an MCU, typically used with toolchains like **GNU Arm Embedded Toolchain (GCC)**.
-
----
 
 ## 🔧 What Is a Linker Script?
 
@@ -24,8 +19,6 @@ A **linker script** is a configuration file used by the linker (`ld` in GCC) to 
 
 This file usually has a `.ld` extension.
 
----
-
 ## 🧠 Understanding MCU Memory Layout
 
 Before writing a linker script, you must know your microcontroller’s memory layout. For example, a typical ARM Cortex-M MCU might have:
@@ -35,13 +28,11 @@ Before writing a linker script, you must know your microcontroller’s memory la
 
 Check the MCU datasheet or reference manual for this information.
 
----
-
 ## 📝 A Basic Linker Script Example
 
 Below is a basic linker script for an ARM Cortex-M MCU:
 
-```ld
+```c
 /* Simple linker script for STM32F103 (256KB Flash, 64KB RAM) */
 
 ENTRY(Reset_Handler)  /* Entry point of the program */
@@ -119,8 +110,6 @@ Defines how different parts of your program map into memory regions:
 `ENTRY(Reset_Handler)`
 Tells the linker where program execution should start. This symbol must match the startup code.
 
----
-
 ## 🛠️ How to Use the Linker Script
 When compiling with GCC, you pass the script to the linker:
 
@@ -130,8 +119,6 @@ arm-none-eabi-gcc -T my_linker_script.ld -nostartfiles -Wl,-Map=output map -o ma
 `-T`: Specifies the linker script
 `-nostartfiles`: Prevents linking default startup code
 `-Wl,-Map`: Generates a memory map file for inspection
-
----
 
 ## 🧪 Verifying the Memory Map
 After building, inspect the .map file:
@@ -157,8 +144,6 @@ You might need to modify or write your own linker script when:
 - Reserving areas for non-volatile storage
 - Partitioning memory for RTOS or secure zones
 
---- 
-
 ## 📦 Advanced: Placing Code or Data in Custom Sections
 Want to place a function or variable in a specific memory region?
 
@@ -169,13 +154,12 @@ const char my_data[] = "Hello!";
 ```
 
 In the linker script:
-```ld
+```c
 .my_section :
 {
   *(.my_section)
 } > FLASH
 ```
----
 
 ## Conclusion
 Writing a linker script gives you precise control over how your firmware uses the microcontroller's memory. It’s a crucial skill for embedded developers, especially when working on bare-metal systems or performance-critical applications.
